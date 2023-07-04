@@ -11,7 +11,7 @@ const createHomePage = () => {
   createTabs();
 
   const headline = document.createElement('h1');
-  headline.innerText = 'Welcome to Restaurant Name';
+  headline.innerText = 'Welcome to The Chaulet Grill';
 
   const restaurantImage = document.createElement('img');
   restaurantImage.src = '/restaurant-lp/img/restaurant_image.jpg';

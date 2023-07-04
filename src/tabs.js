@@ -7,7 +7,20 @@ import createContactPage from "./contact";
 const createTabs = () => {
     const content = document.querySelector('#content');
 
-    // Create three tab divs
+    // Create top nav div
+    const nav = document.createElement('div');
+    nav.classList.add('nav');
+
+    // Create the Restaurant Name
+    const cGrill = document.createElement('h1');
+    cGrill.classList.add('name');
+    cGrill.textContent = 'The Chaulet Grill';
+
+    // Create main tabs div
+    const tabs  = document.createElement('div');
+    tabs.classList.add('tabs');
+
+    // Create sub tab divs
     const div1 = document.createElement('div');
     const div2 = document.createElement('div');
     const div3  = document.createElement('div');
@@ -28,9 +41,12 @@ const createTabs = () => {
     div3.textContent = 'Contact';
 
     // Append the divs to the content div
-    content.appendChild(div1);
-    content.appendChild(div2);
-    content.appendChild(div3);
+    content.appendChild(nav);
+    nav.appendChild(cGrill);
+    nav.appendChild(tabs);
+    tabs.appendChild(div1);
+    tabs.appendChild(div2);
+    tabs.appendChild(div3);
 
     div1.addEventListener('click', () => {
         createHomePage();
